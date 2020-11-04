@@ -20,6 +20,18 @@ $(document).ready(function () {
       }
 
     })
+    $('.nav > i').click(function(){
+
+      var selectedItemIndex = $(this).index()
+
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+
+      var selectedImagesIndex = $('.images > img').eq(selectedItemIndex)
+
+      selectedImagesIndex.addClass('active');
+      selectedImagesIndex.siblings().removeClass('active')
+    })
 
     function nextSlide(){
 
